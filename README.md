@@ -7,23 +7,23 @@ In fast-paced logistics operations, managing field load tickets, fluctuating fue
 
 This solution establishes a completely automated data ecosystem:
 
-  **1. Automated Collection:** Submitted load tickets are captured instantly.
+1. Automated Collection: Submitted load tickets are captured instantly.
 
-  **2. Supabase Data Hub:** A cloud-based Supabase (PostgreSQL) database handles all data storage and background calculations (such as dynamic fuel surcharges     and dispatch fees) automatically behind the scenes.
+2. Supabase Data Hub: A cloud-based Supabase (PostgreSQL) database handles all data storage and background calculations (such as dynamic fuel surcharges     and dispatch fees) automatically behind the scenes.
 
-  **3. Control Center:** An interactive dashboard allows management to monitor revenue pools, load frequencies, and route performance in real time.
+3. Control Center: An interactive dashboard allows management to monitor revenue pools, load frequencies, and route performance in real time.
 
-  **4. Instant Invoicing:** Billing administrators can select an accounting window on the dashboard and click a link to generate custom-formatted, self-calculating spreadsheet statements automatically.
+4. Instant Invoicing: Billing administrators can select an accounting window on the dashboard and click a link to generate custom-formatted, self-calculating spreadsheet statements automatically.
 
   🛠️ **Tools**
 
-**Data Ingestion:** JotForm for field data entry, routed instantly using Make (formerly Integromat) automation webhooks.
+* Data Ingestion: JotForm for field data entry, routed instantly using Make (formerly Integromat) automation webhooks.
 
-**Database Management:** Supabase / PostgreSQL for secure relational data tables, specialized processing routines, and live analytics views.
+* Database Management: Supabase / PostgreSQL for secure relational data tables, specialized processing routines, and live analytics views.
 
-**Business Intelligence:** Looker Studio for interactive executive tracking dashboards and parameter filtering.
+* Business Intelligence: Looker Studio for interactive executive tracking dashboards and parameter filtering.
 
-**Automation Layer:** Google Apps Script (JavaScript) for communicating with the database and dynamically building formatted spreadsheets.
+* Automation Layer: Google Apps Script (JavaScript) for communicating with the database and dynamically building formatted spreadsheets.
 
 🔄 **System Architecture & Data Journey**
 
@@ -55,13 +55,13 @@ graph TD
 
 The dashboard serves as the operational headquarters, providing immediate insight into critical variables synced straight from Supabase:
 
-**Executive Scorecards:** Live monitoring counters tracking aggregate loads, subtotals, dispatch fees, fuel surcharges, and total net revenue.
+* Executive Scorecards: Live monitoring counters tracking aggregate loads, subtotals, dispatch fees, fuel surcharges, and total net revenue.
 
-**Time-Series Analysis:** Double-axis charting cross-referencing trip volume fluctuations alongside historical financial trends month-over-month.
+* Time-Series Analysis: Double-axis charting cross-referencing trip volume fluctuations alongside historical financial trends month-over-month.
 
-**Route Count:** Bar graphs isolating performance across various route combinations, defining which lanes handle the heaviest logistics weight.
+* Route Count: Bar graphs isolating performance across various route combinations, defining which lanes handle the heaviest logistics weight.
 
-**Parameter Bridges:** Built-in customized text parameter controls that bridge user browser filters with target automation scripts, guaranteeing that what the admin sees on screen is exactly what gets printed to the spreadsheet.
+* Parameter Bridges: Built-in customized text parameter controls that bridge user browser filters with target automation scripts, guaranteeing that what the admin sees on screen is exactly what gets printed to the spreadsheet.
 
 <p align="center">
   <img width="791" height="593" alt="image" src="https://github.com/user-attachments/assets/d0b99917-83db-4c79-af58-ec6146484078" />
@@ -71,11 +71,11 @@ The dashboard serves as the operational headquarters, providing immediate insigh
 
 📈 **Operational Impact**
 
-**Eliminated Delays:** Statement generation times were reduced from hours of manual spreadsheet copying to a one-click automated process.
+* Eliminated Delays: Statement generation times were reduced from hours of manual spreadsheet copying to a one-click automated process.
 
-**Zero Math Errors:** Moving calculation formulas from manual spreadsheet entries directly into backend database views guarantees 100% accurate billings.
+* Zero Math Errors: Moving calculation formulas from manual spreadsheet entries directly into backend database views guarantees 100% accurate billings.
 
-**Complete Transparency:** Management can view live metrics, profit margins, and distribution data instantly instead of waiting for end-of-month closed books.
+* Complete Transparency: Management can view live metrics, profit margins, and distribution data instantly instead of waiting for end-of-month closed books.
 
 📂 **Repository File Guide**
 
