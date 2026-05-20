@@ -1,7 +1,6 @@
 DROP VIEW IF EXISTS statements;
 CREATE OR REPLACE VIEW statements AS
 WITH rate_priority AS (
-    -- Step 1: Find all possible rate matches and rank them
     SELECT 
         l.load_id,
         r.rate_id,
@@ -65,14 +64,12 @@ matched_data AS (
         AND l.delivery_date <= dr_company.end_date
 )
 SELECT *,
-    -- Step A: Calculate FSC 
     CASE 
         WHEN apply_fsc = TRUE THEN 
             ROUND(subtotal  * (active_fsc_rate / 100), 2)
         ELSE 0
     END AS fsc_amount,
 
-     -- Step B: Calculate Dispatch Fee
     ROUND((subtotal + 
         CASE 
             WHEN apply_fsc = TRUE THEN 
@@ -80,7 +77,6 @@ SELECT *,
             ELSE 0
         END) * (active_dispatch_rate / 100), 2)  AS dispatch_fee_total,
     
-    -- Step C: Final Total = (Gross - Dispatch) + FSC
     ROUND(
         subtotal  -- The Net
         + 
@@ -99,13 +95,4 @@ SELECT *,
     , 2) AS final_total
 FROM matched_data;
 
-SELECT t.*
-FROM loads t
-LEFT JOIN statements v ON t.load_id = v.load_id
-WHERE v.load_id IS NULL;
 
-SELECT s.company_name, s.driver_name, s.delivery_date, s.ticket_number, s.truck_number, s.material, s.pick_up, s.drop_off, s.tons, s.rate
-FROM statements s
-JOIN loads l on s.load_id = l.load_id
-WHERE l.created_at >= '2026-05-18 00:00:00'
-ORDER BY 1,3,2;
