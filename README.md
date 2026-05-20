@@ -63,9 +63,11 @@ The dashboard serves as the operational headquarters, providing immediate insigh
 
 **Parameter Bridges:** Built-in customized text parameter controls that bridge user browser filters with target automation scripts, guaranteeing that what the admin sees on screen is exactly what gets printed to the spreadsheet.
 
-<img width="1200" height="898" alt="image" src="https://github.com/user-attachments/assets/4e4629bf-dab1-48aa-9bde-5a4876327baf" />
-
-*This image is edited with AI to hide real figures and company names to protect their privacy.
+<p align="center">
+  <img width="791" height="593" alt="image" src="https://github.com/user-attachments/assets/d0b99917-83db-4c79-af58-ec6146484078" />
+  <br />
+  <i>*This image is edited with AI to hide real figures and company names to protect their privacy.</i>
+</p>
 
 📈 **Operational Impact**
 
