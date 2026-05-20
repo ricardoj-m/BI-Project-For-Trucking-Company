@@ -65,10 +65,12 @@ The dashboard serves as the operational headquarters, providing immediate insigh
 
 📂 **Repository File Guide**
 
-/database/schema.sql - Database tables, indexes, and rate parameters.
+schema.sql - Database tables, indexes, and rate parameters.
 
-/database/triggers_and_views.sql - Text cleaning routines and dynamic lookup logic.
+trigger.sql - Text cleaning routines and standardizing.
 
-/automation/statement_generator.js - Google Apps Script document automation code.
+view.sql - Calculations for accurate and pertinent insights. 
+
+statement_generator.js - Google Apps Script document automation code.
 
   
