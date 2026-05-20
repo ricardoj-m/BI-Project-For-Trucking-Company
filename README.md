@@ -47,7 +47,7 @@ graph TD
 
 **2. Standardization:** On arrival, the database automatically cleans typos, spacing, and accidental accents to ensure field entries perfectly match official driver registries.
 
-**3. Dynamic Rate Evaluation:** Supabase looks at the delivery date and locations of each load, automatically pulling the correct matching rates and corresponding fuel surcharges valid for that specific day.
+**3. Statements View:**  Consolidates individual raw logistics load summaries into client/carrier ready statements.
 
 **4. Reporting & Action:** Cleaned summaries sync directly from Supabase to Looker Studio. From here, administrators use active filters to sort dates or companies and click embedded action rows to trigger document automation.
 
