@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE OR REPLACE FUNCTION cleaning()
 RETURNS TRIGGER AS $$
 BEGIN
-    -- 1. Try to find the official name by cleaning BOTH the master list and the new input
+    -- 1. Try to find the official name by cleaning BOTH the official list and the new input
     -- We remove dots, spaces, and accents to ensure a match
     SELECT driver_name, company_name INTO NEW.driver_name, NEW.company_name
     FROM drivers
