@@ -28,12 +28,20 @@ This solution establishes a completely automated data ecosystem:
 🔄 **System Architecture & Data Journey**
 
 ```mermaid
-graph LR
-    A[Field Entry: JotForm] --> B[Automation: Make.com]
-    B --> C[Central Database: Supabase]
-    C --> D[BI Dashboard: Looker Studio]
-    D --> E[Automation Script: Apps Script]
-    E --> F[Formatted Statements: Google Sheets]
+graph TD
+    A[Field Entry: JotForm] -->|Webhook Payloads| B[Automation: Make.com]
+    B -->|Standardization| C[(Central Database: Supabase)]
+    C -->|Live SQL Query Sync| D[BI Dashboard: Looker Studio]
+    D -->|Dynamic URL Parameters| E[Automation Script: Apps Script]
+    E -->|Smart Layout Mapping| F[Formatted Statements: Google Sheets]
+
+    %% Compact custom styling (2px borders)
+    style A fill:#f3f0ff,stroke:#845ef7,stroke-width:2px
+    style B fill:#f3f0ff,stroke:#845ef7,stroke-width:2px
+    style C fill:#edf2ff,stroke:#4c6ef5,stroke-width:2px
+    style D fill:#e3fafc,stroke:#0c8599,stroke-width:2px
+    style E fill:#e3fafc,stroke:#0c8599,stroke-width:2px
+    style F fill:#e3fafc,stroke:#0c8599,stroke-width:2px
 ```
 **1. Ingestion:** Drivers input their load summaries (tonnage, locations, ticket numbers) into a digital form. Make automatically structuralizes this text data and sends it directly to Supabase.
 
