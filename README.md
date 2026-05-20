@@ -53,15 +53,19 @@ graph TD
 
 📊 **Dashboard Insights & Business Intelligence**
 
-The dashboard serves as the operational headquarters, providing immediate insight into critical fleet variables synced straight from Supabase:
+The dashboard serves as the operational headquarters, providing immediate insight into critical variables synced straight from Supabase:
 
 **Executive Scorecards:** Live monitoring counters tracking aggregate loads, subtotals, dispatch fees, fuel surcharges, and total net revenue.
 
 **Time-Series Analysis:** Double-axis charting cross-referencing trip volume fluctuations alongside historical financial trends month-over-month.
 
-**Route Efficiency Logs:** Bar graphs isolating performance velocity across various route combinations, defining which lanes handle the heaviest logistics weight.
+**Route Count:** Bar graphs isolating performance across various route combinations, defining which lanes handle the heaviest logistics weight.
 
 **Parameter Bridges:** Built-in customized text parameter controls that bridge user browser filters with target automation scripts, guaranteeing that what the admin sees on screen is exactly what gets printed to the spreadsheet.
+
+<img width="1200" height="898" alt="image" src="https://github.com/user-attachments/assets/4e4629bf-dab1-48aa-9bde-5a4876327baf" />
+
+*This image is edited with AI to hide real figures and company names to protect their privacy.
 
 📈 **Operational Impact**
 
